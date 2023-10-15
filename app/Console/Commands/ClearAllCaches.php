@@ -30,5 +30,8 @@ class ClearAllCaches extends Command
         $this->call('event:clear');
         $this->call('route:clear');
         $this->call('view:clear');
+
+        $this->info('All caches cleared.');
+        // $this->component()->info('All caches cleared.');
     }
 }

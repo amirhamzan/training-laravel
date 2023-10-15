@@ -26,3 +26,9 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('locale/{locale}', function ($locale) {
+    app()->setLocale($locale);
+
+    return redirect()->back();
+});
